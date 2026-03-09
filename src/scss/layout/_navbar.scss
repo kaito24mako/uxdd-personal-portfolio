@@ -1,0 +1,39 @@
+@use "../abstracts/" as *;
+
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  .logo {
+    font-family: $primary-font;
+  }
+
+  .page-links {
+    display: flex;
+    gap: 20px;
+    font-size: $medium-font;
+    font-family: $primary-font;
+    padding-right: 90px;
+
+    // underline animation
+    a {
+      position: relative;
+
+      &::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: 1px;
+        width: 0%;
+        height: 2px;
+        background-color: $accent-color;
+        transition: width 0.3s ease;
+      }
+
+      &:hover::after {
+        width: 100%;
+      }
+    }
+  }
+}

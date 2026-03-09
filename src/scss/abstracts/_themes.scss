@@ -1,0 +1,13 @@
+[data-theme="light"] {
+  --background: linear-gradient(to bottom, #ebecec, #f5eff2, #baa4ce);
+  --color-primary: #1b1b1b;
+  --color-secondary: #e4e4de;
+  --color-accent: #d4112a;
+}
+
+[data-theme="dark"] {
+  --background: linear-gradient(to right, #0f172a, #334155);
+  --color-primary: #e4e4de;
+  --color-secondary: #1b1b1b;
+  --color-accent: #d4112a;
+}

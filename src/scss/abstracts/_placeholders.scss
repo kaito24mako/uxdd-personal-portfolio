@@ -1,0 +1,31 @@
+// as variables are being used in this file
+@use "./variables" as *;
+
+%card {
+  display: flex;
+  align-items: center;
+  padding: 20px 0;
+  gap: 15px;
+}
+
+%card-image {
+  border: 1px solid $secondary-color;
+  border-radius: 10px;
+  transition: transform 0.2s ease-out;
+  box-shadow: $small-shadow;
+}
+
+%card-description {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 350px;
+  gap: 10px;
+  font-size: $small-font;
+}
+
+%card-title {
+  font-size: calc($large-font + 0.3rem);
+  font-weight: 600;
+  font-style: italic;
+}

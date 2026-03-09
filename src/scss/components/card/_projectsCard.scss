@@ -1,0 +1,53 @@
+@use "../../abstracts/" as *;
+
+.card-container {
+  @extend %card;
+  flex-direction: column;
+  z-index: 2;
+
+  img {
+    @extend %card-image;
+    width: 300px;
+
+    &:hover {
+      transform: scale(1.04);
+    }
+  }
+
+  .description-container {
+    @extend %card-description;
+    padding-left: 50px;
+
+    h2 {
+      @extend %card-title;
+    }
+  }
+}
+
+// applies to both ProjectsCard.jsx and FeaturedCard.jsx
+
+.tech-container,
+.buttons-container {
+  display: flex;
+  gap: 15px;
+
+  .tech {
+    transition: color 0.3s ease;
+
+    &:hover {
+      color: $accent-color;
+    }
+  }
+
+  .button {
+    padding: 5px 15px;
+    border: 1px solid $accent-color;
+    border-radius: 10px;
+    color: $accent-color;
+    transition: background-color 0.3s ease-out;
+
+    &:hover {
+      background-color: #d4112b1e;
+    }
+  }
+}

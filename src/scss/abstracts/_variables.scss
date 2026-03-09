@@ -1,0 +1,29 @@
+@import url("https://fonts.googleapis.com/css2?family=Libertinus+Serif:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&display=swap");
+
+$primary-font: "Libertinus Serif", "Segoe UI", sans-serif;
+$secondary-font: "Segoe UI", Helvetica, Arial, sans-serif;
+
+$primary-color: var(--color-primary, #1b1b1b);
+$secondary-color: var(--color-secondary, #e4e4de);
+$accent-color: var(--color-accent, #d4112a);
+$light-blue-color: var(--color-blue-light, rgb(24, 155, 162));
+$light-pink-color: var(--color-pink-light, #bf83f3);
+
+$background-color: var(
+  --background,
+  linear-gradient(to bottom, #ebecec, #f5eff2, #baa4ce)
+);
+
+$vlarge-font: 3rem;
+$large-font: 1.5rem;
+$medium-font: 1.1rem;
+$small-font: 0.9rem;
+$vsmall-font: 0.7rem;
+
+$large-gap: 20px;
+$medium-gap: 15px;
+$small-gap: 10px;
+$vsmall-gap: 5px;
+
+$medium-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+$small-shadow: 0 2px 12px rgba(0, 0, 0, 0.15);

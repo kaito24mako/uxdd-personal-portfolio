@@ -1,0 +1,20 @@
+@use "../../abstracts/" as *;
+
+.theme-buttons {
+  padding: 10px;
+  border: 1px solid $primary-color;
+  border-radius: 50%;
+  background: transparent;
+  backdrop-filter: blur(10px);
+  transition: transform 0.6s ease;
+}
+
+.rotate-dark {
+  transform: rotate(0deg);
+  color: $light-blue-color;
+}
+
+.rotate-light {
+  transform: rotate(180deg);
+  color: $light-pink-color;
+}

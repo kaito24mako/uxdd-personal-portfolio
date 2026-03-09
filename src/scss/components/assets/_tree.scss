@@ -1,0 +1,9 @@
+@use "../../abstracts/" as *;
+
+.tree-image {
+  position: absolute;
+  width: 600px;
+  left: -150px;
+  bottom: -340px;
+  z-index: -1;
+}

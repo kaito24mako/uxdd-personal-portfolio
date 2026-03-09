@@ -1,0 +1,17 @@
+@use "./base/reset";
+@use "./base/base";
+
+@use "./components/card/featuredCard";
+@use "./components/card/projectsCard";
+
+@use "./components/theme/themeToggle";
+
+@use "./components/assets/tree";
+
+@use "./layout/footer";
+@use "./layout/navbar";
+
+@use "./pages/contact";
+@use "./pages/home";
+@use "./pages/notFound";
+@use "./pages/projects";
