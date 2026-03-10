@@ -1,5 +1,7 @@
 import Tree from "../components/assets/Tree";
 
+import { playClickSound } from "../components/assets/audio/click";
+
 function ContactPage() {
   return (
     <>
@@ -12,11 +14,15 @@ function ContactPage() {
           developer.
         </p>
         <p>I am open to all opportunities and collaborations.</p>
-        <p className="email-wrapper">
-          <a className="email" href="mailto:kaitowatanabemcc@gmail.com">
+        <div>
+          <a
+            className="email"
+            href="mailto:kaitowatanabemcc@gmail.com"
+            onClick={playClickSound}
+          >
             kaitowatanabemcc@gmail.com
           </a>
-        </p>
+        </div>
       </div>
     </>
   );

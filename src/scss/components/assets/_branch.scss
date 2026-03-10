@@ -1,0 +1,16 @@
+@use "../../abstracts/" as *;
+
+.branch {
+  position: absolute;
+  right: 0;
+  top: 20%;
+  width: clamp(160px, 30vw, 450px);
+  z-index: 2;
+  pointer-events: none;
+}
+
+@media (max-width: 690px) {
+  .branch {
+    top: 28%;
+  }
+}

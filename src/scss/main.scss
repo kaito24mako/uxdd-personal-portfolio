@@ -1,12 +1,14 @@
 @use "./base/reset";
 @use "./base/base";
 
+@use "./components/assets/branch";
+@use "./components/assets/tree";
+@use "./components/assets/leaf";
+
 @use "./components/card/featuredCard";
 @use "./components/card/projectsCard";
 
 @use "./components/theme/themeToggle";
-
-@use "./components/assets/tree";
 
 @use "./layout/footer";
 @use "./layout/navbar";
@@ -15,3 +17,7 @@
 @use "./pages/home";
 @use "./pages/notFound";
 @use "./pages/projects";
+
+:root {
+  --leaf-fall-distance: 150vh;
+}

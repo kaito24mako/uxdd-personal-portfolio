@@ -14,7 +14,7 @@
     gap: 20px;
     font-size: $medium-font;
     font-family: $primary-font;
-    padding-right: 90px;
+    padding-right: 70px;
 
     // underline animation
     a {
@@ -34,6 +34,17 @@
       &:hover::after {
         width: 100%;
       }
+    }
+  }
+}
+
+@media (max-width: 690px) {
+  .nav-container {
+    flex-direction: column;
+    gap: 15px;
+
+    .page-links {
+      padding-right: 0px;
     }
   }
 }

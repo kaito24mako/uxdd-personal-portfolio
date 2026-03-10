@@ -2,7 +2,8 @@ import ticTacToe from "../../../assets/project1.png";
 import bookCollection from "../../../assets/project2.png";
 import etchSketch from "../../../assets/project3.png";
 import dashboard from "../../../assets/project4.png";
-// import lastManStanding from "../../../assets/project5.png";
+
+import { playClickSound } from "../../assets/audio/click";
 
 function ProjectsCard() {
   const projects = [
@@ -54,14 +55,14 @@ function ProjectsCard() {
   ];
 
   return (
-    <>
+    <div className="cards-container">
       {projects.map((project) => (
         <div className="card-container">
           <img src={project.image} />
 
           <div className="description-container">
             <h2>{project.name}</h2>
-            <p>{project.description}</p>
+            <p className="description">{project.description}</p>
 
             <div className="tech-container">
               {project.tech.map((tech) => (
@@ -70,17 +71,27 @@ function ProjectsCard() {
             </div>
 
             <div className="buttons-container">
-              <a className="button" href={project.codeUrl} target="_blank">
+              <a
+                className="button"
+                href={project.codeUrl}
+                target="_blank"
+                onClick={playClickSound}
+              >
                 View Code
               </a>
-              <a className="button" href={project.liveUrl} target="_blank">
+              <a
+                className="button"
+                href={project.liveUrl}
+                target="_blank"
+                onClick={playClickSound}
+              >
                 View Site
               </a>
             </div>
           </div>
         </div>
       ))}
-    </>
+    </div>
   );
 }
 

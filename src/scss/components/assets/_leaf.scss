@@ -1,0 +1,123 @@
+@use "../../abstracts/" as *;
+
+.falling-leaf-left {
+  position: absolute;
+  top: -100px; // start above the viewport
+  left: 10%;
+  width: 45px;
+  pointer-events: none; // prevents blocking clicks
+  z-index: 10;
+  animation: leaf-fall-left 50s linear infinite;
+}
+
+.falling-leaf-right {
+  position: absolute;
+  top: -900px;
+  right: 10%;
+  width: 40px;
+  pointer-events: none;
+  z-index: 10;
+  animation: leaf-fall-right 50s linear infinite;
+}
+
+@keyframes leaf-fall-left {
+  0% {
+    transform: translateX(0) translateY(0) rotate(0deg);
+    opacity: 0;
+  }
+  10% {
+    transform: translateX(15px)
+      translateY(calc(var(--leaf-fall-distance) * 0.1)) rotate(-15deg);
+    opacity: 1;
+  }
+  20% {
+    transform: translateX(35px)
+      translateY(calc(var(--leaf-fall-distance) * 0.2)) rotate(-30deg);
+  }
+  30% {
+    transform: translateX(50px)
+      translateY(calc(var(--leaf-fall-distance) * 0.3)) rotate(-45deg);
+  }
+  40% {
+    transform: translateX(35px)
+      translateY(calc(var(--leaf-fall-distance) * 0.4)) rotate(-40deg);
+  }
+  50% {
+    transform: translateX(20px)
+      translateY(calc(var(--leaf-fall-distance) * 0.5)) rotate(-30deg);
+  }
+  60% {
+    transform: translateX(10px)
+      translateY(calc(var(--leaf-fall-distance) * 0.6)) rotate(-15deg);
+  }
+  70% {
+    transform: translateX(20px)
+      translateY(calc(var(--leaf-fall-distance) * 0.7)) rotate(0deg);
+  }
+  80% {
+    transform: translateX(35px)
+      translateY(calc(var(--leaf-fall-distance) * 0.8)) rotate(-5deg);
+    opacity: 0.7;
+  }
+  90% {
+    transform: translateX(50px)
+      translateY(calc(var(--leaf-fall-distance) * 0.9)) rotate(-15deg);
+    opacity: 0.4;
+  }
+  100% {
+    transform: translateX(65px) translateY(var(--leaf-fall-distance))
+      rotate(-30deg);
+    opacity: 0;
+  }
+}
+
+@keyframes leaf-fall-right {
+  0% {
+    transform: translateX(0) translateY(0) rotate(0deg);
+    opacity: 0;
+  }
+  10% {
+    transform: translateX(-15px)
+      translateY(calc(var(--leaf-fall-distance) * 0.1)) rotate(15deg);
+    opacity: 1;
+  }
+  20% {
+    transform: translateX(-35px)
+      translateY(calc(var(--leaf-fall-distance) * 0.2)) rotate(30deg);
+  }
+  30% {
+    transform: translateX(-50px)
+      translateY(calc(var(--leaf-fall-distance) * 0.3)) rotate(45deg);
+  }
+  40% {
+    transform: translateX(-35px)
+      translateY(calc(var(--leaf-fall-distance) * 0.4)) rotate(40deg);
+  }
+  50% {
+    transform: translateX(-20px)
+      translateY(calc(var(--leaf-fall-distance) * 0.5)) rotate(30deg);
+  }
+  60% {
+    transform: translateX(-10px)
+      translateY(calc(var(--leaf-fall-distance) * 0.6)) rotate(15deg);
+  }
+  70% {
+    transform: translateX(-20px)
+      translateY(calc(var(--leaf-fall-distance) * 0.7)) rotate(0deg);
+  }
+  80% {
+    transform: translateX(-35px)
+      translateY(calc(var(--leaf-fall-distance) * 0.8)) rotate(5deg);
+    opacity: 0.7;
+  }
+  90% {
+    transform: translateX(-50px)
+      translateY(calc(var(--leaf-fall-distance) * 0.9)) rotate(15deg);
+    opacity: 0.4;
+  }
+  100% {
+    transform: translateX(-65px) translateY(var(--leaf-fall-distance))
+      rotate(30deg);
+    opacity: 0;
+  }
+}

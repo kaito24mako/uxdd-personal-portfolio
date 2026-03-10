@@ -1,25 +1,37 @@
 @use "../../abstracts/" as *;
 
-.card-container {
-  @extend %card;
-  flex-direction: column;
-  z-index: 2;
+.cards-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
 
-  img {
-    @extend %card-image;
-    width: 300px;
+  .card-container {
+    @extend %card;
+    flex-direction: column;
+    z-index: 2;
 
-    &:hover {
-      transform: scale(1.04);
+    img {
+      @extend %card-image;
+      width: 350px;
+      height: 200px;
+
+      &:hover {
+        transform: scale(1.04);
+      }
     }
-  }
 
-  .description-container {
-    @extend %card-description;
-    padding-left: 50px;
+    .description-container {
+      @extend %card-details;
+      padding-left: 50px;
 
-    h2 {
-      @extend %card-title;
+      h2 {
+        @extend %card-title;
+      }
+
+      .description {
+        opacity: $large-opacity;
+      }
     }
   }
 }
@@ -32,6 +44,7 @@
   gap: 15px;
 
   .tech {
+    opacity: $large-opacity;
     transition: color 0.3s ease;
 
     &:hover {

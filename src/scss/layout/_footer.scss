@@ -10,7 +10,7 @@
 
   font-size: $small-font;
   border-radius: 20px;
-  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+  box-shadow: $medium-shadow;
   background: transparent;
   backdrop-filter: blur(10px);
   z-index: 2;

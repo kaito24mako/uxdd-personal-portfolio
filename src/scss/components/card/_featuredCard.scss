@@ -13,10 +13,14 @@
   }
 
   .featured-description-container {
-    @extend %card-description;
+    @extend %card-details;
 
     h2 {
       @extend %card-title;
+    }
+
+    .description {
+      opacity: $large-opacity;
     }
   }
 }

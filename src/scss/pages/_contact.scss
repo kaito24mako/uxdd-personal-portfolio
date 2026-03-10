@@ -6,7 +6,6 @@
   align-items: center;
   position: relative;
   z-index: 1;
-  margin-top: 10px;
 
   .details-container {
     display: flex;
@@ -14,8 +13,11 @@
     align-items: center;
     gap: $small-gap;
     padding-top: 10px;
-    /* padding-left: 400px; */
     font-size: $small-font;
+
+    p {
+      opacity: $large-opacity;
+    }
 
     .email {
       position: relative;
@@ -23,6 +25,7 @@
       font-style: italic;
       font-family: $primary-font;
       font-size: 1rem;
+      opacity: 1;
       cursor: pointer;
 
       &::after {

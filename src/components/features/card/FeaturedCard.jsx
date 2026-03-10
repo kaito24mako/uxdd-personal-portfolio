@@ -1,5 +1,7 @@
 import lastManStanding from "../../../assets/project5.png";
 
+import { playClickSound } from "../../assets/audio/click";
+
 function FeaturedCard() {
   const project = {
     name: "Last Man Standing",
@@ -13,11 +15,11 @@ function FeaturedCard() {
 
   return (
     <div className="featured-card-container">
-      <img src={lastManStanding} className="featured-project-image" />
+      <img src={lastManStanding} />
 
       <div className="featured-description-container">
         <h2>{project.name}</h2>
-        <p>{project.description}</p>
+        <p className="description">{project.description}</p>
 
         <div className="tech-container">
           {project.tech.map((tech) => (
@@ -26,10 +28,20 @@ function FeaturedCard() {
         </div>
 
         <div className="buttons-container">
-          <a className="button" href={project.codeUrl} target="_blank">
+          <a
+            className="button"
+            href={project.codeUrl}
+            target="_blank"
+            onClick={playClickSound}
+          >
             View Code
           </a>
-          <a className="button" href={project.liveUrl} target="_blank">
+          <a
+            className="button"
+            href={project.liveUrl}
+            target="_blank"
+            onClick={playClickSound}
+          >
             View Site
           </a>
         </div>
