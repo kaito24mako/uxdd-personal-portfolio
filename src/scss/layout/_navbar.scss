@@ -4,6 +4,22 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  position: fixed;
+  width: 100%;
+  padding: 10px 30px;
+
+  background-color: transparent;
+  transition:
+    background-color 0.2s ease,
+    box-shadow 0.2s ease,
+    backdrop-filter 0.2s ease;
+  z-index: 100;
+
+  &.nav-scrolled {
+    background-color: rgba(0, 0, 0, 0.05);
+    box-shadow: $small-shadow;
+    backdrop-filter: blur(4px);
+  }
 
   .logo {
     font-family: $primary-font;

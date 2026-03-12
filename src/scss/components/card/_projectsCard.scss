@@ -13,17 +13,16 @@
 
     img {
       @extend %card-image;
-      width: 350px;
+      width: 360px;
       height: 200px;
 
       &:hover {
-        transform: scale(1.04);
+        @extend %card-image-hover;
       }
     }
 
     .description-container {
       @extend %card-details;
-      padding-left: 50px;
 
       h2 {
         @extend %card-title;

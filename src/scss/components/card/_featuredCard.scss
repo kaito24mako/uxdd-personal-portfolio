@@ -2,13 +2,14 @@
 
 .featured-card-container {
   @extend %card;
+  gap: 20px;
 
   img {
     @extend %card-image;
     width: 400px;
 
     &:hover {
-      transform: scale(1.04);
+      @extend %card-image-hover;
     }
   }
 
