@@ -1,5 +1,9 @@
 @use "../abstracts/" as *;
 
+:root {
+  --leaf-fall-distance: 150vh;
+}
+
 .app {
   display: flex;
   flex-direction: column;

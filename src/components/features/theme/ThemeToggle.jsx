@@ -1,5 +1,5 @@
 import { MdDarkMode, MdLightMode } from "react-icons/md";
-import { playClickSound } from "../../assets/audio/click";
+import { playSwitchSound } from "../../assets/audio/switch";
 
 function ThemeToggle({ handleThemeToggle, isDark }) {
   return (
@@ -7,7 +7,7 @@ function ThemeToggle({ handleThemeToggle, isDark }) {
       className={`theme-buttons ${isDark ? "rotate-dark" : "rotate-light"}`}
       onClick={() => {
         handleThemeToggle();
-        playClickSound();
+        playSwitchSound();
       }}
     >
       {isDark ? <MdDarkMode /> : <MdLightMode />}

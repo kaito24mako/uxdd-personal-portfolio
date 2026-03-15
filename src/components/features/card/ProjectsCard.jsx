@@ -1,9 +1,7 @@
-import ticTacToe from "../../../assets/project1.png";
-import bookCollection from "../../../assets/project2.png";
-import etchSketch from "../../../assets/project3.png";
-import dashboard from "../../../assets/project4.png";
-
-import { playClickSound } from "../../assets/audio/click";
+import ticTacToe from "../../../assets/projects/project1.png";
+import bookCollection from "../../../assets/projects/project2.png";
+import etchSketch from "../../../assets/projects/project3.png";
+import dashboard from "../../../assets/projects/project4.png";
 
 function ProjectsCard() {
   const projects = [
@@ -58,7 +56,7 @@ function ProjectsCard() {
     <div className="cards-container">
       {projects.map((project) => (
         <div className="card-container">
-          <img src={project.image} />
+          <img src={project.image} alt={`Project: ${project.name}`} />
 
           <div className="description-container">
             <h2>{project.name}</h2>
@@ -71,20 +69,10 @@ function ProjectsCard() {
             </div>
 
             <div className="buttons-container">
-              <a
-                className="button"
-                href={project.codeUrl}
-                target="_blank"
-                onClick={playClickSound}
-              >
+              <a className="button" href={project.codeUrl} target="_blank">
                 View Code
               </a>
-              <a
-                className="button"
-                href={project.liveUrl}
-                target="_blank"
-                onClick={playClickSound}
-              >
+              <a className="button" href={project.liveUrl} target="_blank">
                 View Site
               </a>
             </div>

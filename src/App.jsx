@@ -1,7 +1,7 @@
 import { Routes, Route } from "react-router-dom";
 
 import HomePage from "./pages/HomePage";
-
+import NotFoundPage from "./pages/NotFoundPage";
 import Layout from "./components/layout/Layout";
 
 function App() {
@@ -10,6 +10,7 @@ function App() {
       <Route path="/" element={<Layout />}>
         <Route index element={<HomePage />} />
       </Route>
+      <Route path="*" element={<NotFoundPage />} />
     </Routes>
   );
 }

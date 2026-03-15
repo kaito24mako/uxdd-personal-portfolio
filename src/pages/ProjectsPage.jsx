@@ -5,11 +5,11 @@ function ProjectsPage() {
   return (
     <div className="projects-container">
       <div className="featured-container">
-        <h2 className="title">FEATURED PROJECT</h2>
+        <h2 className="title">Featured Project</h2>
         <FeaturedCard />
       </div>
       <div className="other-projects-container">
-        <h2 className="title">PROJECTS</h2>
+        <h2 className="title">Projects</h2>
         <div className="card-wrapper">
           <ProjectsCard />
         </div>

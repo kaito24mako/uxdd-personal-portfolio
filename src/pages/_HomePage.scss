@@ -1,4 +1,4 @@
-@use "../abstracts/" as *;
+@use "../scss/abstracts/" as *;
 
 .home-container {
   display: flex;
@@ -12,8 +12,8 @@
     flex-direction: column;
     align-items: center;
     gap: 0px;
-    padding-top: 140px;
-    padding-bottom: 70px;
+    padding-top: 130px;
+    padding-bottom: 100px;
 
     h1 {
       font-size: clamp(2rem, 1rem + 5vw, 3.2rem);
@@ -54,11 +54,4 @@ and keep the final animated state */
 .expand-from-blur {
   animation: expand-from-blur 2s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0s 1
     normal both;
-}
-
-@media (max-width: 690px) {
-  .home-container > .titles {
-    padding-top: 140px;
-    padding-bottom: 70px;
-  }
 }

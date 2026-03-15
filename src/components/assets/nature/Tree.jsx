@@ -1,4 +1,4 @@
-import tree from "../../assets/tree.png";
+import tree from "../../../assets/nature/tree.png";
 
 function Tree() {
   return <img src={tree} className="tree-image" />;

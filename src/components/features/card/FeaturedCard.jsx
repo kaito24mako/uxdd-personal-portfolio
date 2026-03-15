@@ -1,6 +1,4 @@
-import lastManStanding from "../../../assets/project5.png";
-
-import { playClickSound } from "../../assets/audio/click";
+import lastManStanding from "../../../assets/projects/project5.png";
 
 function FeaturedCard() {
   const project = {
@@ -15,7 +13,7 @@ function FeaturedCard() {
 
   return (
     <div className="featured-card-container">
-      <img src={lastManStanding} />
+      <img src={lastManStanding} alt={`Featured project: ${project.name}`} />
 
       <div className="featured-description-container">
         <h2>{project.name}</h2>
@@ -28,20 +26,10 @@ function FeaturedCard() {
         </div>
 
         <div className="buttons-container">
-          <a
-            className="button"
-            href={project.codeUrl}
-            target="_blank"
-            onClick={playClickSound}
-          >
+          <a className="button" href={project.codeUrl} target="_blank">
             View Code
           </a>
-          <a
-            className="button"
-            href={project.liveUrl}
-            target="_blank"
-            onClick={playClickSound}
-          >
+          <a className="button" href={project.liveUrl} target="_blank">
             View Site
           </a>
         </div>

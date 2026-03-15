@@ -1,23 +1,19 @@
 @use "./base/reset";
 @use "./base/base";
 
-@use "./components/assets/branch";
-@use "./components/assets/tree";
-@use "./components/assets/leaf";
+@use "../components/assets/nature/branch";
+@use "../components/assets/nature/leaf";
+@use "../components/assets/nature/tree";
 
-@use "./components/card/featuredCard";
-@use "./components/card/projectsCard";
+@use "../components/features/card/FeaturedCard";
+@use "../components/features/card/ProjectsCard";
 
-@use "./components/theme/themeToggle";
+@use "../components/features/theme/ThemeToggle";
 
-@use "./layout/footer";
-@use "./layout/navbar";
+@use "../components/layout/Footer";
+@use "../components/layout/Navbar";
 
-@use "./pages/contact";
-@use "./pages/home";
-@use "./pages/notFound";
-@use "./pages/projects";
-
-:root {
-  --leaf-fall-distance: 150vh;
-}
+@use "../pages/HomePage";
+@use "../pages/ProjectsPage";
+@use "../pages/ContactPage";
+@use "../pages/NotFoundPage";

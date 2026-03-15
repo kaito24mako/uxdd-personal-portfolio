@@ -1,10 +1,11 @@
 import ThemeToggle from "../features/theme/ThemeToggle";
-import { playSwitchSound } from "../assets/audio/switch";
+import { playClickSound } from "../assets/audio/click";
 import { useEffect, useState } from "react";
 
 function Navbar({ handleThemeToggle, isDark }) {
   const [scrolled, setScrolled] = useState(false);
 
+  // useEffect because scroll changes do not activate re-renders in React components
   useEffect(() => {
     function onScroll() {
       setScrolled(window.scrollY > 40);
@@ -18,18 +19,18 @@ function Navbar({ handleThemeToggle, isDark }) {
 
   return (
     <header className={`nav-container ${scrolled ? "nav-scrolled" : ""}`}>
-      <a className="logo" href="#home" onClick={playSwitchSound}>
+      <a className="logo" href="#home" onClick={playClickSound}>
         KaitoWatanabe
       </a>
 
       <div className="page-links">
-        <a href="#home" onClick={playSwitchSound}>
+        <a href="#home" onClick={playClickSound}>
           Home
         </a>
-        <a href="#projects" onClick={playSwitchSound}>
+        <a href="#projects" onClick={playClickSound}>
           Projects
         </a>
-        <a href="#contact" onClick={playSwitchSound}>
+        <a href="#contact" onClick={playClickSound}>
           Contact
         </a>
       </div>

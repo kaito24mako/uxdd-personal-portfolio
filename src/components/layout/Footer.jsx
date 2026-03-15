@@ -1,47 +1,33 @@
-import portrait from "../../assets/portrait.png";
-import github from "../../assets/github.png";
-import facebook from "../../assets/facebook.png";
-import instagram from "../../assets/instagram.png";
-
-import { playClickSound } from "../assets/audio/click";
+import portrait from "../../assets/socials/portrait.png";
+import github from "../../assets/socials/github.png";
+import facebook from "../../assets/socials/facebook.png";
+import instagram from "../../assets/socials/instagram.png";
 
 function Footer() {
   return (
     <footer className="footer-container">
       <div className="image-social-wrapper">
-        <img src={portrait} className="portrait" alt="Portrait of myself" />
+        <img
+          src={portrait}
+          className="portrait"
+          alt="Portrait of Kaito Watanabe"
+        />
         <div className="footer-wrapper">
           <div className="social-links">
-            <a
-              href="https://github.com/"
-              target="_blank"
-              onClick={playClickSound}
-            >
-              <img
-                src={github}
-                alt="Link to my GitHub"
-                className="socials-logo"
-              />
+            <a href="https://github.com/" target="_blank">
+              <img src={github} alt="Link to GitHub" className="socials-logo" />
             </a>
-            <a
-              href="https://www.facebook.com/"
-              target="_blank"
-              onClick={playClickSound}
-            >
+            <a href="https://www.facebook.com/" target="_blank">
               <img
                 src={facebook}
-                alt="Link to my Facebook"
+                alt="Link to Facebook"
                 className="socials-logo"
               />
             </a>
-            <a
-              href="https://www.instagram.com/kaito24mako/"
-              target="_blank"
-              onClick={playClickSound}
-            >
+            <a href="https://www.instagram.com/kaito24mako/" target="_blank">
               <img
                 src={instagram}
-                alt="Link to my Instagram"
+                alt="Link to Instagram"
                 className="socials-logo"
               />
             </a>

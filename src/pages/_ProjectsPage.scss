@@ -1,4 +1,4 @@
-@use "../abstracts/" as *;
+@use "../scss/abstracts/" as *;
 
 .projects-container {
   display: flex;
@@ -11,7 +11,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-bottom: 50px;
+  margin-bottom: 40px;
 
   .card-wrapper {
     display: flex;
@@ -24,14 +24,22 @@
   text-align: center;
   max-width: 500px;
   width: 100%;
-  margin-bottom: 10px;
-  padding-bottom: 10px;
+  margin-bottom: 5px;
+  padding-bottom: 5px;
 
   border-bottom: 2px dotted $primary-color;
-  font-size: $medium-font;
-  font-weight: 400;
+  font-size: 1.2rem;
+  font-weight: 100;
 }
 
-.featured-container > .title {
-  padding-top: 30px;
+// for margins when scrolled using navbar links
+
+#projects {
+  scroll-margin-top: 80px;
+}
+
+@media (max-width: 640px) {
+  #projects {
+    scroll-margin-top: 110px;
+  }
 }
