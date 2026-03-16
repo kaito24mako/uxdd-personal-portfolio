@@ -7,11 +7,10 @@
   justify-content: center;
   position: relative;
 
-  .titles {
+  .header {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 0px;
     padding-top: 130px;
     padding-bottom: 100px;
 
@@ -25,6 +24,12 @@
       font-style: italic;
       font-weight: 100;
     }
+  }
+}
+
+@media (max-width: 640px) {
+  .header {
+    padding-bottom: 80px;
   }
 }
 

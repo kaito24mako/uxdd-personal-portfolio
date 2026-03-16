@@ -1,19 +1,22 @@
-import lastManStanding from "../../../assets/projects/project5.png";
+import searchEmAll from "../../../assets/projects/project7.png";
 
 function FeaturedCard() {
   const project = {
-    name: "Last Man Standing",
-    image: lastManStanding,
+    name: "Search 'em All!",
+    image: searchEmAll,
     description:
-      "A rock-paper-scissors game in which the user versues the computer based on logic created in JavaScript.",
-    tech: ["HTML", "CSS", "JavaScript"],
-    codeUrl: "https://github.com/kaito24mako/Last-Man-Standing",
-    liveUrl: "https://kaito24mako.github.io/Last-Man-Standing/",
+      "A PokémonTCG search engine, in which users can search for any Pokémon card and add it to their collection for tracking purposes.",
+    // "Fetching APIs with React",
+    tech: ["HTML", "SCSS", "JavaScript", "React"],
+    codeUrl: "https://github.com/kaito24mako/react-pokemon-app",
+    liveUrl: "https://kaito24mako.github.io/react-pokemon-app/",
   };
 
   return (
     <div className="featured-card-container">
-      <img src={lastManStanding} alt={`Featured project: ${project.name}`} />
+      <a href={project.liveUrl} target="_blank">
+        <img src={searchEmAll} alt={`Featured project: ${project.name}`} />
+      </a>
 
       <div className="featured-description-container">
         <h2>{project.name}</h2>

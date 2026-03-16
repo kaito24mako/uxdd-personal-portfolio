@@ -14,6 +14,7 @@ function Layout() {
     setIsDark((prev) => !prev);
   }
 
+  // used AI!
   // to calculate the total height of the website and set it to the css declaration
   useEffect(() => {
     const doc = document.documentElement;
