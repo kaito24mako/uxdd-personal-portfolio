@@ -29,9 +29,11 @@ function Layout() {
       <img src={branch} className="branch" alt="Branch" />
 
       <Navbar handleThemeToggle={handleThemeToggle} isDark={isDark} />
+
       <div className="app-content">
         <Outlet />
       </div>
+
       <Footer />
     </div>
   );

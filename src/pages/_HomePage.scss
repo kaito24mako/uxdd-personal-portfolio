@@ -6,25 +6,6 @@
   align-items: center;
   justify-content: center;
   position: relative;
-
-  .header {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding-top: 130px;
-    padding-bottom: 100px;
-
-    h1 {
-      font-size: clamp(2rem, 1rem + 5vw, 3.2rem);
-      font-weight: 400;
-    }
-
-    h2 {
-      font-size: clamp(1.3rem, 1rem + 0.9vw, 1.6rem);
-      font-style: italic;
-      font-weight: 100;
-    }
-  }
 }
 
 @media (max-width: 640px) {
@@ -34,6 +15,7 @@
 }
 
 // animation for h2
+// with help from AI!
 
 @keyframes expand-from-blur {
   0% {
@@ -48,6 +30,11 @@
   }
 }
 
+.expand-from-blur {
+  animation: expand-from-blur 2s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0s 1
+    normal both;
+}
+
 /* run animation 
 for 2 secs
 using a smooth easing curve from center
@@ -55,8 +42,3 @@ with no delay
 play it once
 in the normal direction
 and keep the final animated state */
-
-.expand-from-blur {
-  animation: expand-from-blur 2s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0s 1
-    normal both;
-}

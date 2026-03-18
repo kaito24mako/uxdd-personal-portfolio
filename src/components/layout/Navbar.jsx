@@ -5,6 +5,7 @@ import { useEffect, useState } from "react";
 function Navbar({ handleThemeToggle, isDark }) {
   const [scrolled, setScrolled] = useState(false);
 
+  // used AI!
   // useEffect because scroll changes do not activate re-renders in React components
   useEffect(() => {
     function onScroll() {

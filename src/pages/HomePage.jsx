@@ -1,3 +1,4 @@
+import styles from "./HomePage.module.scss";
 import ProjectsPage from "./ProjectsPage";
 import ContactPage from "./ContactPage";
 
@@ -6,7 +7,7 @@ function HomePage() {
     <>
       {/* id is for hash links */}
       <section className="home-container" id="home">
-        <div className="header">
+        <div className={styles.title}>
           <h1>I'm Kaito</h1>
           <h2 className="expand-from-blur">With Passion in Web Development</h2>
         </div>

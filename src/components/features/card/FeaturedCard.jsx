@@ -5,7 +5,7 @@ function FeaturedCard() {
     name: "Search 'em All!",
     image: searchEmAll,
     description:
-      "A PokémonTCG search engine, in which users can search for any Pokémon card and add it to their collection for tracking purposes.",
+      "Search for Pokémon cards and save them for collection and tracking.",
     // "Fetching APIs with React",
     tech: ["HTML", "SCSS", "JavaScript", "React"],
     codeUrl: "https://github.com/kaito24mako/react-pokemon-app",
