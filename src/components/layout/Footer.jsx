@@ -14,7 +14,7 @@ function Footer() {
         />
         <div className="footer-wrapper">
           <div className="social-links">
-            <a href="https://github.com/" target="_blank">
+            <a href="https://github.com/kaito24mako" target="_blank">
               <img src={github} alt="Link to GitHub" className="socials-logo" />
             </a>
             <a href="https://www.facebook.com/" target="_blank">
