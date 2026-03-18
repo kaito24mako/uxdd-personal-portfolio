@@ -1,6 +1,6 @@
 # 🙇 Personal Portfolio
 
-My personal portfolio site, created as part of an assessment in Term 1 of the Holmesglen Institute's Diploma of Web Development course.
+My personal portfolio site, created as part of an assessment in Term 1 of the Holmesglen Institute's Diploma of Web Development course
 
 ## ⚙️ Skills
 
