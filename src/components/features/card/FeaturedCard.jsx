@@ -6,7 +6,7 @@ function FeaturedCard() {
     image: searchEmAll,
     description:
       "Search for Pokémon cards and save them for collection and tracking",
-    tech: ["HTML", "SCSS", "JavaScript", "React"],
+    tech: ["React", "SCSS"],
     codeUrl: "https://github.com/kaito24mako/react-pokemon-app",
     liveUrl: "https://kaito24mako.github.io/react-pokemon-app/",
   };
