@@ -1,37 +1,48 @@
-import searchEmAll from "../../../assets/projects/project7.png";
+import pokemon from "../../../assets/projects/project7.png";
+
+import { useEffect, useState } from "react";
+
+import axios from "axios";
 
 function FeaturedCard() {
-  const project = {
-    name: "Search 'em All!",
-    image: searchEmAll,
-    description:
-      "Search for Pokémon cards and save them for collection and tracking",
-    tech: ["React", "SCSS"],
-    codeUrl: "https://github.com/kaito24mako/react-pokemon-app",
-    liveUrl: "https://kaito24mako.github.io/react-pokemon-app/",
-  };
+  const [project, setProject] = useState([]);
+
+  useEffect(() => {
+    async function fetchProject() {
+      const res = await axios.get("http://localhost:3000/api/projects");
+      const projects = res.data;
+      console.log(projects);
+
+      const featured = projects.find((p) => p.title === "Calculator");
+      console.log(featured);
+
+      setProject(featured);
+    }
+
+    fetchProject();
+  }, []);
 
   return (
     <div className="featured-card-container">
-      <a href={project.liveUrl} target="_blank">
-        <img src={searchEmAll} alt={`Featured project: ${project.name}`} />
+      <a href={project.siteUrl} target="_blank">
+        <img src={pokemon} />
       </a>
 
       <div className="featured-description-container">
-        <h2>{project.name}</h2>
+        <h2>{project.title}</h2>
         <p className="description">{project.description}</p>
 
-        <div className="tech-container">
+        {/* <div className="tech-container">
           {project.tech.map((tech) => (
             <p className="tech">{tech}</p>
           ))}
-        </div>
+        </div> */}
 
         <div className="buttons-container">
-          <a className="button" href={project.codeUrl} target="_blank">
+          <a className="button" href={project.githubUrl} target="_blank">
             View Code
           </a>
-          <a className="button" href={project.liveUrl} target="_blank">
+          <a className="button" href={project.siteUrl} target="_blank">
             View Site
           </a>
         </div>
