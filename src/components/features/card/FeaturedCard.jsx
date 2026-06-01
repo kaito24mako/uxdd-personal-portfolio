@@ -1,20 +1,22 @@
 import pokemon from "../../../assets/projects/project7.png";
+import axios from "axios";
 
 import { useEffect, useState } from "react";
-
-import axios from "axios";
 
 function FeaturedCard() {
   const [project, setProject] = useState([]);
 
   useEffect(() => {
     async function fetchProject() {
-      const res = await axios.get("http://localhost:3000/api/projects");
+      // const res = await axios.get(
+      //   "http://localhost:3000/api/projects/published",
+      // );
+      const res = await axios.get(
+        "https://portfolio-cms-blond-five.vercel.app/api/projects",
+      );
       const projects = res.data;
-      console.log(projects);
 
-      const featured = projects.find((p) => p.title === "Calculator");
-      console.log(featured);
+      const featured = projects.find((p) => p.title === "Pokemon App");
 
       setProject(featured);
     }
@@ -32,11 +34,13 @@ function FeaturedCard() {
         <h2>{project.title}</h2>
         <p className="description">{project.description}</p>
 
-        {/* <div className="tech-container">
-          {project.tech.map((tech) => (
-            <p className="tech">{tech}</p>
+        <div className="tech-container">
+          {project.tags?.map((tag, index) => (
+            <p className="tech" key={index}>
+              {tag}
+            </p>
           ))}
-        </div> */}
+        </div>
 
         <div className="buttons-container">
           <a className="button" href={project.githubUrl} target="_blank">

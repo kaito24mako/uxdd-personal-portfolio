@@ -1,19 +1,22 @@
-import etchSketch from "../../../assets/projects/project3.png";
+import projectImage from "../../../assets/projects/portfolio-cms.png";
+import axios from "axios";
 
 import { useEffect, useState } from "react";
-
-import axios from "axios";
 
 function ProjectsCard() {
   const [projects, setProjects] = useState([]);
 
   useEffect(() => {
     async function fetchProjects() {
-      const res = await axios.get("http://localhost:3000/api/projects");
+      // const res = await axios.get(
+      //   "http://localhost:3000/api/projects/published",
+      // );
+      const res = await axios.get(
+        "https://portfolio-cms-blond-five.vercel.app/api/projects/published",
+      );
       const projects = res.data;
 
-      const published = projects.filter((p) => p.status === "Published");
-      setProjects(published);
+      setProjects(projects);
     }
 
     fetchProjects();
@@ -24,7 +27,7 @@ function ProjectsCard() {
       {projects.map((p) => (
         <div className="card-container" key={p.id}>
           <a href={p.siteUrl} target="_blank">
-            <img src={etchSketch} />
+            <img src={projectImage} />
           </a>
 
           <div className="description-container">
@@ -32,11 +35,13 @@ function ProjectsCard() {
 
             <p className="description">{p.description}</p>
 
-            {/* <div className="tech-container">
-              {p.tech.map((tech) => (
-                <p className="tech">{tech}</p>
+            <div className="tech-container">
+              {p.tags?.map((tag, index) => (
+                <p className="tech" key={index}>
+                  {tag}
+                </p>
               ))}
-            </div> */}
+            </div>
 
             <div className="buttons-container">
               <a className="button" href={p.githubUrl} target="_blank">
