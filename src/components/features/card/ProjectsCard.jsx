@@ -9,10 +9,10 @@ function ProjectsCard() {
   useEffect(() => {
     async function fetchProjects() {
       // const res = await axios.get(
-      //   "http://localhost:3000/api/projects/published",
+      //   "http://localhost:3000/api/users/kaito24mako/projects/published",
       // );
       const res = await axios.get(
-        "https://portfolio-cms-blond-five.vercel.app/api/projects/published",
+        "https://portfolio-cms-blond-five.vercel.app/api/users/kaito24mako/projects/published",
       );
       const projects = res.data;
 

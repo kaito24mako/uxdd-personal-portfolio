@@ -9,14 +9,14 @@ function FeaturedCard() {
   useEffect(() => {
     async function fetchProject() {
       // const res = await axios.get(
-      //   "http://localhost:3000/api/projects/published",
+      //   "http://localhost:3000/api/users/kaito24mako/projects/published",
       // );
       const res = await axios.get(
-        "https://portfolio-cms-blond-five.vercel.app/api/projects",
+        "https://portfolio-cms-blond-five.vercel.app/api/users/kaito24mako/projects/published",
       );
       const projects = res.data;
 
-      const featured = projects.find((p) => p.title === "Catch Em' All!");
+      const featured = projects.find((p) => p.title === "Kaito's app");
 
       setProject(featured);
     }
