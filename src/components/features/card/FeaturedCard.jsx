@@ -16,7 +16,7 @@ function FeaturedCard() {
       );
       const projects = res.data;
 
-      const featured = projects.find((p) => p.title === "Kaito's app");
+      const featured = projects.find((p) => p.title === "Catch Em' All!");
 
       setProject(featured);
     }
